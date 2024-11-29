@@ -2,6 +2,7 @@
 Repositorio dedicado al proyecto de digitilización
 - Samuel : **@samuelcrz30**
 - Cristian: **@CRhernandez1**
+  
 _SUPUESTOS A ANALIZAR_
 Problema A 
 _Startup Tecnológica_
