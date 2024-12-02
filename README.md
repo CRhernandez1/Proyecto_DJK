@@ -18,7 +18,7 @@ _Cadena de Restaurantes_
 
 
 
-<<<<<<< HEAD
+
 #Exposición
 
 _Supuesto B_
@@ -34,5 +34,5 @@ _Ventajas_ :
 -Permite Escalabilidad tanto horizontal (añadir más estancias) como vertical (aumentar recursos).
 _Requisitos_:
 VPS , Docker , GIT
-=======
->>>>>>> 2b14dca26b16af9be4a389fed220c730a27edb5e
+
+
