@@ -40,3 +40,6 @@ VPS , Docker , GIT
 
 [Página oficial Dokku](https://dokku.com/)
 
+Dokku para el supuesto **B**:
+
+Para la empresa de desarrollo de software, podría interesarle implementar esta plataforma como servicio ya que puede alojar una parte de front, back y una base de datos.
