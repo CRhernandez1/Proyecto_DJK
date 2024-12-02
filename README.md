@@ -23,10 +23,13 @@ _Cadena de Restaurantes_
 
 _Supuesto B_
 
-Posibles plataformas como servicio para aplicar en el supuesto **B**
+Posibles plataformas como servicio para aplicar en el supuesto 
+**B**
+
 **Dokku**
 Dokku es una plataforma como servicio para  aplicaciones en servidores virtuales privados.
 _Ventajas_ :
+
 -Dokku ofrece un precio más bajo que plataformas gestionadas y permite pagar solo por los recursos utilizados en el VPS.
 -Ofrece compatibilidad con múltiples lenguajes en Node.js, Python , Ruby y otros.
 -Dokku además automatiza tareas de despliegue(configurar un servidor web, base de datos, actualizaciones, etc)
