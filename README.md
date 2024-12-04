@@ -46,4 +46,4 @@ Para la empresa de desarrollo de software, podría interesarle implementar esta 
 
 **Instalación de Dokku:**
 
-[Instalación](/Captura%20de%20pantalla%202024-12-04%20110416%20Dokku.png)
+![Instalación](/Captura%20de%20pantalla%202024-12-04%20110416%20Dokku.png)
