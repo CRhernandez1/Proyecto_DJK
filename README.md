@@ -54,3 +54,10 @@ En el caso de dokku, para el análisis económico debemos centrarnos en VPS (Vir
 |-------------|-------------|-------------|
 | Plan básico      | Plan básico      | Plan de ahorro 1 año      |
 | $5.00 al mes     | $5.00 al mes      | $5.08 al mes      |
+
+Para el proyecto que se nos está planteando necesitaremos un hardware con suficientes recursos para alojar cada componente y su carga:
+
+| CPU | RAM | Almacenamiento |
+|-------------|-------------|-------------|
+| 2-4 núcleos o más de 4 núcleos     | 8-16 GB     | 100-200GB      |
+| (Dependiendo de la magnitud del proyecto)     | Menos de 8GB para un proyecto pequeño.      | Importante tener este factor en cuenta para la base de datos.      |
