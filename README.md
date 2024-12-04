@@ -30,7 +30,7 @@ Posibles plataformas como servicio para aplicar en el supuesto
 Dokku es una plataforma como servicio para  aplicaciones en servidores virtuales privados.
 _Ventajas_ :
 
--Dokku ofrece un precio más bajo que plataformas gestionadas y permite pagar solo por los recursos utilizados en el VPS.
+-Dokku es gratuito y permite pagar solo por los recursos utilizados en el VPS.
 -Ofrece compatibilidad con múltiples lenguajes en Node.js, Python , Ruby y otros.
 -Dokku además automatiza tareas de despliegue(configurar un servidor web, base de datos, actualizaciones, etc)
 -Utiliza Docker
@@ -47,3 +47,10 @@ Para la empresa de desarrollo de software, podría interesarle implementar esta 
 **Instalación de Dokku:**
 
 ![Instalación](/Captura%20de%20pantalla%202024-12-04%20110416%20Dokku.png)
+
+En el caso de dokku, para el análisis económico debemos centrarnos en VPS (Virtual Private Servers) que nos permitan alojar nuestro proyecto.
+
+| DigitalOcean | Vultr | Azure |
+|-------------|-------------|-------------|
+| Plan básico      | Plan básico      | Plan de ahorro 1 año      |
+| $5.00 al mes     | $5.00 al mes      | $5.08 al mes      |
