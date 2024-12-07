@@ -33,7 +33,7 @@ Cuenta con integración con GitHub y GitLab, permitiendo integrar repositorios y
 Por lo que desde el panel de Railway podemos vincular el proyecto con un repositorio remoto. Estableciendo así una conexión entre la plataforma y el código fuente. Para que después la misma se encarge de desplegarlo automáticamente. ¿Y cómo sucede esto? Gracias a la monitorización de ramas.  
 Se puede establecer que rama se desea monitorizear. Por lo que podríamos monitorizar la rama `main` y usarla como rama de producción. Mientras usamos otras ramas para hacer pruebas o implementar nuevas funcionalidades. Con el objetivo de que Railway despliegue la aplicación cuando los cambios lleguen a la rama `main`.  
 
-**Dokku**
+[Dokku](https://dokku.com/)
 Dokku es una plataforma como servicio para  aplicaciones en servidores virtuales privados.
 _Ventajas_ :
 
@@ -45,7 +45,6 @@ _Ventajas_ :
 _Requisitos_:
 VPS , Docker , GIT
 
-[Página oficial Dokku](https://dokku.com/)
 
 Dokku para el supuesto **B**:
 
@@ -68,6 +67,7 @@ Para el proyecto que se nos está planteando necesitaremos un hardware con sufic
 |-------------|-------------|-------------|
 | 2-4 núcleos o más de 4 núcleos     | 8-16 GB     | 100-200GB      |
 | (Dependiendo de la magnitud del proyecto)     | Menos de 8GB para un proyecto pequeño.      | Importante tener este factor en cuenta para la base de datos.      |
+
 3.Análisis Económico.  
 4.Conclusiones.  
 
