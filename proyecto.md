@@ -82,7 +82,7 @@ Para el proyecto que se nos está planteando necesitaremos un hardware con sufic
 
 - Heroku tiene diferentes planes de presupuesto dependiendo de las caracteísticas y del tipo de aplicación que queramos desplegar. En este caso escogeríamos una opción que permita alojar aplicaciones con funciones complejas que requieren alta disponibilidad, latencia muy baja y la gestión de un gran volumen de solicitudes simultáneas.
 
-![Heroku_prices]("C:\Users\ciclo\OneDrive\Escritorio\proyecto_digitalización\img\heroku_prices.png")
+![Heroku_prices](./Captura%20de%20pantalla%202024-12-13%2019185.png)
 
 El presupuesto sería de 238.7 euros al mes debido a las del 
 
