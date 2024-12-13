@@ -2,6 +2,8 @@
 Repositorio dedicado al proyecto de digitilización
 - Samuel : **@samuelcrz30**  
 - Cristian: **@CRhernandez1** 
+- Eduardo: **@edumel20**
+
 
 **_SUPUESTOS A ANALIZAR:_**  
 
@@ -67,6 +69,23 @@ Para el proyecto que se nos está planteando necesitaremos un hardware con sufic
 |-------------|-------------|-------------|
 | 2-4 núcleos o más de 4 núcleos     | 8-16 GB     | 100-200GB      |
 | (Dependiendo de la magnitud del proyecto)     | Menos de 8GB para un proyecto pequeño.      | Importante tener este factor en cuenta para la base de datos.      |
+
+#### Heroku
+- [Heroku](https://www.heroku.com/) es una PaaS que permite a los desarrolladores crear, implementar y escalar aplicaciones rápidamente sin preocuparse por la gestión de servidores o infraestructura subyacente.
+
+
+<div align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/480px-Heroku_logo.svg.png" width="200px"/>
+</div>
+
+
+- Sus características principales son que es multilenguaje, ya que es compatible cono múltiples lenguajes como Python, Java o PHP, permite implementar aplicaciones directamente desde GitHub (se puede vincular a un repositorio de GitHub para implementaciones automáticas cada vez que se actualiza el código en la rama *main*) o desde la terminal, se pueden utilizar complementos o herramientas externas para configurar un escalado automático (ajustando la cantidad de instancias según el tráfico o el uso de recursos) y soporta bases de datos PostgreSQL
+
+- Heroku tiene diferentes planes de presupuesto dependiendo de las caracteísticas y del tipo de aplicación que queramos desplegar. En este caso escogeríamos una opción que permita alojar aplicaciones con funciones complejas que requieren alta disponibilidad, latencia muy baja y la gestión de un gran volumen de solicitudes simultáneas.
+
+![Heroku_prices](./Captura%20de%20pantalla%202024-12-13%2019185.png)
+
+- En este caso optaremos por la opción que tienen para empresas, ya que lo que buscamos es no preocuparnos por la gestión de servidores ni por la infraestructura subyacente.
 
 3.Análisis Económico.  
 4.Conclusiones.  
