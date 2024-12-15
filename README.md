@@ -80,13 +80,14 @@ Por último, Dokku facilita la gestión de recursos entre diferentes aplicacione
 [Heroku](https://www.heroku.com/) es una PaaS que permite a los desarrolladores crear, implementar y escalar aplicaciones rápidamente sin preocuparse por la gestión de servidores o infraestructura subyacente.
 
 
-Heroku ejecuta las aplicaciones en *dynos*, los cuales se denominan como a los contenedores virtuales encargados de mantener en funcionamiento la aplicación.
+Basándose en contenedores a las que llama “dynos”. Los cuales se pueden entender como piezas de rompecabezas que pueden ponerse (encenderse) o quitarse (apagarse) según el tamaño de la aplicación (el rompecabezas).  Por tanto, tienen la responsabilidad de empaquetar y ejecutar aplicaciones y servicios, funcionan como un contenedor inteligente en un entorno de ejecución confiable y completamente administrado.
+
+Además Heroku, ofrece la posibilidad de ejecutar las aplicaciones en nombres de dominio únicos, que se utilizan para enrutar las solicitudes HTTP al contenedor correcto.
+
+Y permite, distintos tipos de escalabilidad. Cuando la aplicación necesita procesar una mayor cantidad de datos o ejecutar tareas que son mucho más pesadas y complejas, Heroku te da la opción de escalar de dos formas, realizando un escalado horizontal, es decir, agregando más dynos o un escalado vertical, aumentando el tamaño de los dynos.
 
 
-<div align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/480px-Heroku_logo.svg.png" width="200px"/>
-</div>
-
+![Logo Heroku](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/480px-Heroku_logo.svg.png)
 
 Sus características principales son los siguientes: 
 - Es multilenguaje, ya que es compatible cono múltiples lenguajes como Python, Java o PHP.
@@ -94,17 +95,16 @@ Sus características principales son los siguientes:
 - Se pueden utilizar complementos o herramientas externas para configurar un escalado automático (ajustando la cantidad de instancias según el tráfico o el uso de recursos).
 - Soporta bases de datos PostgreSQL con el `add-on` Heroku Postgres, que facilitan la configuración, conexión y administración de BBDD.
 
-- Heroku tiene diferentes planes de presupuesto dependiendo de las caracteísticas y del tipo de aplicación que queramos desplegar. En este caso escogeríamos una opción que permita alojar aplicaciones con funciones complejas que requieren alta disponibilidad, latencia muy baja y la gestión de un gran volumen de solicitudes simultáneas.
+- Heroku tiene diferentes planes de presupuesto dependiendo de las caracteísticas y del tipo de aplicación que queramos desplegar. En este caso escogeríamos una opción que permita alojar aplicaciones con funciones complejas que requieren alta disponibilidad, latencia muy baja y la gestión de un gran volumen de solicitudes simultáneas. 
 
-![Heroku_prices](./Captura%20de%20pantalla%202024-12-13%2019185.png)
 
-- En este caso optaremos por la opción que tienen para empresas, ya que lo que buscamos es no preocuparnos por la gestión de servidores ni por la infraestructura subyacente.
+![Heroku_prices](./Pricing%20Heroku.png)
 
 ## 3.Análisis Económico.
 
 ### Heroku
 
-Como mencionamos previamente, Heroku trabaja con dynos. Los cuales varían según el plan que se elija. Cada uno tiene características y limitaciones específicas que afectan directamente el rendimiento de las aplicaciones.
+Como mencionamos previamente, Heroku trabaja con dynos. Los cuales varían según el plan que se elija. Cada uno tiene características y limitaciones específicas que afectan directamente el rendimiento de las aplicaciones. Aunque realmente estos contenedores no alojan tu aplicación. De hecho, toda la plataforma Heroku, así como todas las aplicaciones creadas en Heroku, se alojan en Amazon Web Services (AWS).
 
 Por lo tanto, con los planes más económicos, nos encontramos una serie de limiticiones importantes. En el plan _Eco_, la mayor de todas es el sleep mode. Es decir, si la aplicación no recibe tráfico de usuarios durante 30 minutos, el dyno entra en modo inactivo, lo que genera un tiempo de inicio más largo cuando se vuelve a acceder a la aplicación. Y en el plan _Basic_, aunque elimina el sleep mode y es una opción económica presenta limitaciones en términos de recursos y escalabilidad. Solo incluye un dyno por aplicación, lo cual puede resultar insuficiente a largo plazo cuando el proyecto crezca o se necesiten más recursos. Además, este plan no incluye soporte prioritario ni herramientas avanzadas para el manejo de aplicaciones en producción, lo que podría ser problemático si se presentan errores o si se necesitan características más sofisticadas.
 
