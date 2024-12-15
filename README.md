@@ -24,6 +24,7 @@ Lo que cumple perfectamente con la premisa del enunciado, ya que podremos centra
 ## 2.Investigación de Plataformas.
 
 ### Railway
+
 [Railway](https://railway.app/) es una platafaroma que ofrece un enfoque simplificado para alojar aplicaciones web, servidores backend y bases de datos, permiento al usuario despreocuparase de la infraestructura.  
 La cual destaca por su facilidad, puesto que ofrece una interfaz muy intuitiva para los usuarios, se encarga de configurar automaticamente recursos como bases de datos, variables de entorno y dominions personalizados.
 Además tiene una gran adaptabilidad, ya que es una plataforma **Pay-as-you-go**, pagas por lo que usas.
@@ -38,6 +39,7 @@ Por lo que desde el panel de Railway podemos vincular el proyecto con un reposit
 Se puede establecer que rama se desea monitorizear. Por lo que podríamos monitorizar la rama `main` y usarla como rama de producción. Mientras usamos otras ramas para hacer pruebas o implementar nuevas funcionalidades. Con el objetivo de que Railway despliegue la aplicación cuando los cambios lleguen a la rama `main`.
 
 ### Dokku
+
 [Dokku](https://dokku.com/) es una plataforma como servicio para aplicaciones en servidores virtuales privados.
 
 ![DokkuPhoto](/A%20Deep%20Dive%20with%20Dokku.png)
@@ -49,6 +51,7 @@ _Ventajas_ :
 - Dokku además automatiza tareas de despliegue(configurar un servidor web, base de datos, actualizaciones, etc)  
 - Utiliza Docker  
 - Permite Escalabilidad tanto horizontal (añadir más estancias) como vertical (aumentar recursos).  
+
 
 _Requisitos_:
 VPS , Docker , GIT
@@ -76,11 +79,14 @@ Por último, Dokku facilita la gestión de recursos entre diferentes aplicacione
 
 [Heroku](https://www.heroku.com/) es una PaaS que permite a los desarrolladores crear, implementar y escalar aplicaciones rápidamente sin preocuparse por la gestión de servidores o infraestructura subyacente.
 
+
 Heroku ejecuta las aplicaciones en *dynos*, los cuales se denominan como a los contenedores virtuales encargados de mantener en funcionamiento la aplicación.
+
 
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/480px-Heroku_logo.svg.png" width="200px"/>
 </div>
+
 
 Sus características principales son los siguientes: 
 - Es multilenguaje, ya que es compatible cono múltiples lenguajes como Python, Java o PHP.
@@ -146,15 +152,12 @@ _3. Costos de infraestructura adicionales:_ Si en algún momento necesitamos una
 
 ## 4.Conclusiones.
 
-Finalmente con el análisis completo que hemos hecho de todas las plataformas:  
+Finalmente con el análisis completo que hemos hecho de todas las plataformas:
+
 - **Dokku** no es precisamente el más acertado para este supuesto ya que es necesario gestionar el servidor y no cumple con el deseo del cliente de no preocuparse por la estructura. A pesar de poder alojar una parte de backend, frontend y conectarse con una base de datos.  
-No opstante se puede barajar la posibilidad de encontrar a una desarrollador con el objetivo de cumplir este trabajo si el cliente desea elejir esta plataforma.
+  No opstante se puede barajar la posibilidad de encontrar a una desarrollador con el objetivo de cumplir este trabajo si el cliente desea elejir esta plataforma.
 
-- **Railway** aparentemente no presenta las dificultades que puede presentar Dokku , sin embargo , una gran desventaja que manifiesta es el incremento de los costos con un uso intensivo.  
-Además de no tener una comunidad tan extensa como otras plataformas y no tener un tiempo de desarrollo tan prolongado.  
-Sin embargo Railway tiene un proceso de configuración rápido y no hay que preocuparse por la infraestructura.
+- Entre **Heroku** y **Railway** decidimos optar por Railway ya que su precio es más flexible y económico, especialmente al principio. En Railway tienes la ventaja de que pagas exclusivamente por los recursos que se utilzan , permitiendo un control más preciso en comparación a los precios fijos de Heroku. Es ideal para proyectos pequeños con gastos iniciales más bajos , y además ofrece herramientas modernas mejorando la productividad de los desarrolladores.
 
-- **Heroku** es la opción más completa permitiendo facilidad de uso, soporte completo para aplicaciones web, PostgreSQL como servicio y gran escalabilidad.  
-Es cierto que presenta algunas desventajas como el costo, siendo un problema similar al de Railway, pudiendo incrementarse según escalan las aplicaciones y se utilzan más recursos.
 
-Como conclusión final , creemos que Heroku es la más adecuada para el supuesto B.
+Como conclusión final , creemos que **Railway** es la más adecuada para el supuesto B.
