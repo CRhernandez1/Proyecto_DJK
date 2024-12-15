@@ -8,16 +8,11 @@ Repositorio dedicado al proyecto de digitilización
 
 ## SUPUESTOS A ANALIZAR:
 
-### Problema A
-
-Una startup tecnológica necesita alojar una aplicación de alto rendimiento que debe escalar rápidamente durante eventos de tráfico elevado. Además, requiere un control total sobre la configuración de los servidores, la red y el almacenamiento, con el objetivo de hilar fino en el hardware para ahorrar costes.
-
+### Problema A  
+Una startup tecnológica necesita alojar una aplicación de alto rendimiento que debe escalar rápidamente durante eventos de tráfico elevado. Además, requiere un control total sobre la configuración de los servidores, la red y el almacenamiento, con el objetivo de hilar fino en el hardware para ahorrar costes.  
 ### Problema B
-
-Una empresa de desarrollo de software debe construir y desplegar una nueva aplicación web en el menor tiempo posible, con la necesidad de disponer un sistema que permita alojar backend, frontend y conectarse con una base de datos PostgreSQL. No desea preocuparse por la gestión de servidores ni por la infraestructura subyacente.
-
-### Problema C
-
+Una empresa de desarrollo de software debe construir y desplegar una nueva aplicación web en el menor tiempo posible, con la necesidad de disponer un sistema que permita alojar backend, frontend y conectarse con una base de datos PostgreSQL. No desea preocuparse por la gestión de servidores ni por la infraestructura subyacente.  
+### Problema C  
 Una cadena de restaurantes necesita implementar una funcionalidad que permita enviar notificaciones automáticas a los clientes cuando su pedido está listo. El sistema debe ser escalable, de bajo coste, y ejecutarse únicamente cuando se realicen pedidos.
 
 ## 1.Identificación del Modelo de Servicio Adecuado.
@@ -51,11 +46,12 @@ Se puede establecer que rama se desea monitorizear. Por lo que podríamos monito
 
 _Ventajas_ :
 
-- Dokku es gratuito y permite pagar solo por los recursos utilizados en el VPS.
-- Ofrece compatibilidad con múltiples lenguajes en Node.js, Python , Ruby y otros.
-- Dokku además automatiza tareas de despliegue(configurar un servidor web, base de datos, actualizaciones, etc)
-- Utiliza Docker
-- Permite Escalabilidad tanto horizontal (añadir más estancias) como vertical (aumentar recursos).
+- Dokku es gratuito y permite pagar solo por los recursos utilizados en el VPS.  
+- Ofrece compatibilidad con múltiples lenguajes en Node.js, Python , Ruby y otros.  
+- Dokku además automatiza tareas de despliegue(configurar un servidor web, base de datos, actualizaciones, etc)  
+- Utiliza Docker  
+- Permite Escalabilidad tanto horizontal (añadir más estancias) como vertical (aumentar recursos).  
+
 
 _Requisitos_:
 VPS , Docker , GIT
@@ -83,16 +79,18 @@ Por último, Dokku facilita la gestión de recursos entre diferentes aplicacione
 
 [Heroku](https://www.heroku.com/) es una PaaS que permite a los desarrolladores crear, implementar y escalar aplicaciones rápidamente sin preocuparse por la gestión de servidores o infraestructura subyacente.
 
-Heroku ejecuta las aplicaciones en _dynos_, los cuales se denominan como a los contenedores virtuales encargados de mantener en funcionamiento la aplicación.
+
+Heroku ejecuta las aplicaciones en *dynos*, los cuales se denominan como a los contenedores virtuales encargados de mantener en funcionamiento la aplicación.
+
 
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/480px-Heroku_logo.svg.png" width="200px"/>
 </div>
 
-Sus características principales son los siguientes:
 
+Sus características principales son los siguientes: 
 - Es multilenguaje, ya que es compatible cono múltiples lenguajes como Python, Java o PHP.
-- Permite implementar aplicaciones directamente desde GitHub ya que sirve como conexión entre el desarrollo local y la nube de Heroku mediante el comando `git pull`.
+- Permite implementar aplicaciones directamente desde GitHub ya que sirve como conexión entre el desarrollo local y la nube de Heroku mediante el comando `git pull`. 
 - Se pueden utilizar complementos o herramientas externas para configurar un escalado automático (ajustando la cantidad de instancias según el tráfico o el uso de recursos).
 - Soporta bases de datos PostgreSQL con el `add-on` Heroku Postgres, que facilitan la configuración, conexión y administración de BBDD.
 
@@ -160,5 +158,6 @@ Finalmente con el análisis completo que hemos hecho de todas las plataformas:
   No opstante se puede barajar la posibilidad de encontrar a una desarrollador con el objetivo de cumplir este trabajo si el cliente desea elejir esta plataforma.
 
 - Entre **Heroku** y **Railway** decidimos optar por Railway ya que su precio es más flexible y económico, especialmente al principio. En Railway tienes la ventaja de que pagas exclusivamente por los recursos que se utilzan , permitiendo un control más preciso en comparación a los precios fijos de Heroku. Es ideal para proyectos pequeños con gastos iniciales más bajos , y además ofrece herramientas modernas mejorando la productividad de los desarrolladores.
+
 
 Como conclusión final , creemos que **Railway** es la más adecuada para el supuesto B.
