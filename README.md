@@ -2,28 +2,35 @@
 
 Repositorio dedicado al proyecto de digitilización
 
-- Samuel : **@samuelcrz30**
-- Cristian: **@CRhernandez1**
-- Eduardo: **@edumel20**
+- Samuel : [@samuelcrz30](https://github.com/samuelcrz30)
+- Cristian: [@CRhernandez1](https://github.com/CRhernandez1)
+- Eduardo: [@edumel20](https://github.com/edumel20)
 
-**_SUPUESTOS A ANALIZAR:_**
+## SUPUESTOS A ANALIZAR:
 
-**Problema A**  
-Una startup tecnológica necesita alojar una aplicación de alto rendimiento que debe escalar rápidamente durante eventos de tráfico elevado. Además, requiere un control total sobre la configuración de los servidores, la red y el almacenamiento, con el objetivo de hilar fino en el hardware para ahorrar costes.  
-**Problema B**  
-Una empresa de desarrollo de software debe construir y desplegar una nueva aplicación web en el menor tiempo posible, con la necesidad de disponer un sistema que permita alojar backend, frontend y conectarse con una base de datos PostgreSQL. No desea preocuparse por la gestión de servidores ni por la infraestructura subyacente.  
-**Problema C**  
+### Problema A
+
+Una startup tecnológica necesita alojar una aplicación de alto rendimiento que debe escalar rápidamente durante eventos de tráfico elevado. Además, requiere un control total sobre la configuración de los servidores, la red y el almacenamiento, con el objetivo de hilar fino en el hardware para ahorrar costes.
+
+### Problema B
+
+Una empresa de desarrollo de software debe construir y desplegar una nueva aplicación web en el menor tiempo posible, con la necesidad de disponer un sistema que permita alojar backend, frontend y conectarse con una base de datos PostgreSQL. No desea preocuparse por la gestión de servidores ni por la infraestructura subyacente.
+
+### Problema C
+
 Una cadena de restaurantes necesita implementar una funcionalidad que permita enviar notificaciones automáticas a los clientes cuando su pedido está listo. El sistema debe ser escalable, de bajo coste, y ejecutarse únicamente cuando se realicen pedidos.
 
-**_1.Identificación del Modelo de Servicio Adecuado._**
+## 1.Identificación del Modelo de Servicio Adecuado.
 
 En nuestro caso hemos elegido el problema B. Y para el mismo creemos que el modelo de servicio en la nube más adecuado, sería PaaS (Plataforma como servicio).  
 Con esta opción, obtenemos un servidor listo para instalar nuestras aplicaciones web, mientras que la gestión del hardware y el software necesario para que nuestra aplicación funcione (Sistema Operativo, servidor web, gestor de base de datos, etc.) es realizada por terceros.  
 Lo que cumple perfectamente con la premisa del enunciado, ya que podremos centrar nuestros esfuerzos en desarrollar el código y despreocuparnos de la gestión de servidores.
 
-**_2.Investigación de Plataformas._**
+## 2.Investigación de Plataformas.
 
-**-[Railway](https://railway.app/):** Es una platafaroma que ofrece un enfoque simplificado para alojar aplicaciones web, servidores backend y bases de datos, permiento al usuario despreocuparase de la infraestructura.  
+### Railway
+
+[Railway](https://railway.app/) es una platafaroma que ofrece un enfoque simplificado para alojar aplicaciones web, servidores backend y bases de datos, permiento al usuario despreocuparase de la infraestructura.  
 La cual destaca por su facilidad, puesto que ofrece una interfaz muy intuitiva para los usuarios, se encarga de configurar automaticamente recursos como bases de datos, variables de entorno y dominions personalizados.
 Además tiene una gran adaptabilidad, ya que es una plataforma **Pay-as-you-go**, pagas por lo que usas.
 
@@ -36,17 +43,20 @@ Cuenta con integración con GitHub y GitLab, permitiendo integrar repositorios y
 Por lo que desde el panel de Railway podemos vincular el proyecto con un repositorio remoto. Estableciendo así una conexión entre la plataforma y el código fuente. Para que después la misma se encarge de desplegarlo automáticamente. ¿Y cómo sucede esto? Gracias a la monitorización de ramas.  
 Se puede establecer que rama se desea monitorizear. Por lo que podríamos monitorizar la rama `main` y usarla como rama de producción. Mientras usamos otras ramas para hacer pruebas o implementar nuevas funcionalidades. Con el objetivo de que Railway despliegue la aplicación cuando los cambios lleguen a la rama `main`.
 
-[Dokku](https://dokku.com/): es una plataforma como servicio para aplicaciones en servidores virtuales privados.
+### Dokku
+
+[Dokku](https://dokku.com/) es una plataforma como servicio para aplicaciones en servidores virtuales privados.
 
 ![DokkuPhoto](/A%20Deep%20Dive%20with%20Dokku.png)
 
 _Ventajas_ :
 
--Dokku es gratuito y permite pagar solo por los recursos utilizados en el VPS.  
--Ofrece compatibilidad con múltiples lenguajes en Node.js, Python , Ruby y otros.  
--Dokku además automatiza tareas de despliegue(configurar un servidor web, base de datos, actualizaciones, etc)  
--Utiliza Docker  
--Permite Escalabilidad tanto horizontal (añadir más estancias) como vertical (aumentar recursos).  
+- Dokku es gratuito y permite pagar solo por los recursos utilizados en el VPS.
+- Ofrece compatibilidad con múltiples lenguajes en Node.js, Python , Ruby y otros.
+- Dokku además automatiza tareas de despliegue(configurar un servidor web, base de datos, actualizaciones, etc)
+- Utiliza Docker
+- Permite Escalabilidad tanto horizontal (añadir más estancias) como vertical (aumentar recursos).
+
 _Requisitos_:
 VPS , Docker , GIT
 
@@ -69,15 +79,22 @@ Por último, Dokku facilita la gestión de recursos entre diferentes aplicacione
 
 ![Instalación](/Captura%20de%20pantalla%202024-12-04%20110416%20Dokku.png)
 
-#### Heroku
+### Heroku
 
-- [Heroku](https://www.heroku.com/) es una PaaS que permite a los desarrolladores crear, implementar y escalar aplicaciones rápidamente sin preocuparse por la gestión de servidores o infraestructura subyacente.
+[Heroku](https://www.heroku.com/) es una PaaS que permite a los desarrolladores crear, implementar y escalar aplicaciones rápidamente sin preocuparse por la gestión de servidores o infraestructura subyacente.
+
+Heroku ejecuta las aplicaciones en _dynos_, los cuales se denominan como a los contenedores virtuales encargados de mantener en funcionamiento la aplicación.
 
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/480px-Heroku_logo.svg.png" width="200px"/>
 </div>
 
-- Sus características principales son que es multilenguaje, ya que es compatible cono múltiples lenguajes como Python, Java o PHP, permite implementar aplicaciones directamente desde GitHub (se puede vincular a un repositorio de GitHub para implementaciones automáticas cada vez que se actualiza el código en la rama _main_) o desde la terminal, se pueden utilizar complementos o herramientas externas para configurar un escalado automático (ajustando la cantidad de instancias según el tráfico o el uso de recursos) y soporta bases de datos PostgreSQL
+Sus características principales son los siguientes:
+
+- Es multilenguaje, ya que es compatible cono múltiples lenguajes como Python, Java o PHP.
+- Permite implementar aplicaciones directamente desde GitHub ya que sirve como conexión entre el desarrollo local y la nube de Heroku mediante el comando `git pull`.
+- Se pueden utilizar complementos o herramientas externas para configurar un escalado automático (ajustando la cantidad de instancias según el tráfico o el uso de recursos).
+- Soporta bases de datos PostgreSQL con el `add-on` Heroku Postgres, que facilitan la configuración, conexión y administración de BBDD.
 
 - Heroku tiene diferentes planes de presupuesto dependiendo de las caracteísticas y del tipo de aplicación que queramos desplegar. En este caso escogeríamos una opción que permita alojar aplicaciones con funciones complejas que requieren alta disponibilidad, latencia muy baja y la gestión de un gran volumen de solicitudes simultáneas.
 
@@ -117,13 +134,13 @@ En nuestro caso hemos decidido valorar las siguientes opciones de planes básico
 | Plan básico  | Plan básico  | Plan de ahorro 1 año |
 | $5.00 al mes | $5.00 al mes | $5.08 al mes         |
 
-**Ventajas a corto plazo:**
+#### Ventajas a corto plazo:
 
 _1. Bajo costo inicial:_ Las opciones de $5 al mes de plataformas como DigitalOcean y Vultr son económicas para el inicio del proyecto, sobre todo si el tráfico de usuarios es bajo.
 
 _2. Control total sobre la infraestructura:_ Al usar Dokku en un VPS, tendríamos control completo sobre el servidor y la infraestructura, por lo que podríamos optimizar y personalizar los recursos.
 
-**Desventajas a largo plazo:**
+#### Desventajas a largo plazo:
 
 _1. Escalabilidad:_ A medida que la aplicación crezca y aumente el tráfico de usuarios, se necesitará escalar el VPS. Lo que se traduce en contratar más recursos (mayor RAM, más CPUs, o mayor almacenamiento). Por ejemplo, el plan básico de $5/mes podría no ser suficiente para manejar la aplicación, si las cosas van bien, en un período relativamente corto. Y escalar puede costar entre $10 y $40 al mes, dependiendo de cuántos recursos adicionales se necesiten.
 
@@ -137,15 +154,11 @@ _3. Costos de infraestructura adicionales:_ Si en algún momento necesitamos una
 
 ## 4.Conclusiones.
 
-Finalmente con el análisis completo que hemos hecho de todas las plataformas:  
-**Dokku** no es precisamente el más acertado para este supuesto ya que es necesario gestionar el servidor y no cumple con el deseo del cliente de no preocuparse por la estructura. A pesar de poder alojar una parte de backend, frontend y conectarse con una base de datos.  
-No opstante se puede barajar la posibilidad de encontrar a una desarrollador con el objetivo de cumplir este trabajo si el cliente desea elejir esta plataforma.
+Finalmente con el análisis completo que hemos hecho de todas las plataformas:
 
-**Railway** aparentemente no presenta las dificultades que puede presentar Dokku , sin embargo , una gran desventaja que manifiesta es el incremento de los costos con un uso intensivo.  
-Además de no tener una comunidad tan extensa como otras plataformas y no tener un tiempo de desarrollo tan prolongado.  
-Sin embargo Railway tiene un proceso de configuración rápido y no hay que preocuparse por la infraestructura.
+- **Dokku** no es precisamente el más acertado para este supuesto ya que es necesario gestionar el servidor y no cumple con el deseo del cliente de no preocuparse por la estructura. A pesar de poder alojar una parte de backend, frontend y conectarse con una base de datos.  
+  No opstante se puede barajar la posibilidad de encontrar a una desarrollador con el objetivo de cumplir este trabajo si el cliente desea elejir esta plataforma.
 
-**Heroku** es la opción más completa permitiendo facilidad de uso, soporte completo para aplicaciones web, PostgreSQL como servicio y gran escalabilidad.  
-Es cierto que presenta algunas desventajas como el costo, siendo un problema similar al de Railway, pudiendo incrementarse según escalan las aplicaciones y se utilzan más recursos.
+- Entre **Heroku** y **Railway** decidimos optar por Railway ya que su precio es más flexible y económico, especialmente al principio. En Railway tienes la ventaja de que pagas exclusivamente por los recursos que se utilzan , permitiendo un control más preciso en comparación a los precios fijos de Heroku. Es ideal para proyectos pequeños con gastos iniciales más bajos , y además ofrece herramientas modernas mejorando la productividad de los desarrolladores.
 
-Como conclusión final , creemos que Heroku es la más adecuada para el supuesto B.
+Como conclusión final , creemos que **Railway** es la más adecuada para el supuesto B.
